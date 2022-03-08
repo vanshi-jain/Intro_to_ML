@@ -1,1 +1,14 @@
-v
+Part A: ERM classification using the knowledge of true data pdf:
+1. Specify the minimum expected risk classification rule in the form of a likelihood-ratio test where the threshold γ is a function of class priors and fixed (nonnegative) loss
+values for each of the four cases D = i|L = j where D is the decision label that is either 0 or 1, like L.
+2. Implement this classifier and apply it on the 10K samples you generated. Vary the threshold γ gradually from 0 to ∞, and for each value of the threshold compute the true positive
+(detection) probability P(D = 1|L = 1; γ) and the false positive (false alarm) probability P(D = 1|L = 0; γ). Using these paired values, trace/plot an approximation of the ROC curve
+of the minimum expected risk classifier. Note that at γ = 0. Due to the finite number of samples used to estimate probabilities, your ROC curve approximation should reach this destination
+value for a finite threshold value. Keep track of (D = 0|L = 1; γ) and P(D = 1|L = 0; γ) values for each gamma value for use in the next section.
+3. Determine the threshold value that achieves minimum probability of error, and on the ROC curce, superimpose clearly (using a different color/shape marker) the true positive and false
+positive values attained by this minimum-P(error) classifier. Calculate and report an estimate of the minimum probability of error that is achievable for this data distribution. Note that
+P(error; γ) = P(D = 1|L = 0; γ)P(L = 0) + P(D = 0|L = 1; γ)P(L = 1). How does your empirically selected γ value that minimizes P(error) compare with the theoretically optimal
+threshold you compute from priors and loss values?
+
+Part B: ERM classification attempt using incorrect knowledge of data distribution (Naive
+Bayesian Classifier, which assumes features are independent given each class label)... For this

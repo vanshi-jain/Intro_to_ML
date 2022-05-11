@@ -1,1 +1,15 @@
 GMM based clustering
+In this question, you will use GMM-based clustering to segment a color image. Pick your color
+image from this dataset: https://www2.eecs.berkeley.edu/Research/Projects/
+CS/vision/grouping/segbench/BSDS300/html/dataset/images.html.
+As preprocessing, for each pixel, generate a 5-dimensional feature vector as follows: (1) append row index, column index, red value, green value, blue value for each pixel into a raw feature
+vector; (2) normalize each feature entry individually to the interval [0,1], so that all of the feature
+vectors representing every pixel in an image fit into the 5-dimensional unit-hypercube.
+Fit a Gaussian Mixture Model to these normalized feature vectors representing the pixels of
+the image. To fit the GMM, use maximum likelihood parameter estimation and 10-fold crossvalidation (with maximum average validation-log-likelihood as the objective) for model order selection.
+Once you have identified the best GMM for your feature ectors, assign the most likely component label to each pixel by evaluating component label posterior probabilities for each feature
+vector according to your GMM. Present the original image and your GMM-based segmentation labels assigned to each pixel side by side for easy visual assessment of your segmentation outcome.
+If using grayscale values as segment/component labels, please uniformly distribute them between
+min/max grayscale values to have good contrast in the label image.
+Hint: If the image has too many pixels for your available computational power, you may
+downsample the image to reduce overall computational needs)
